@@ -1,15 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        "3xl": "1920PX",
+        // print: { raw: "print" },
+      },
+      backgroundImage: {
+        banner: "url('./images/shape-1.png')",
+        cntBanner: "url('./images/1.jpg')",
+        sbanner: "url('./images/sbanner.jpg')",
+      },
+    },
   },
   plugins: [],
 };
